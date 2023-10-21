@@ -7,4 +7,10 @@
     <RootNamespace>jQuery_Tutorials</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\jquery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\jquery\" />
+  </ItemGroup>
 </Project>

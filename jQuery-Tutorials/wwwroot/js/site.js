@@ -1,5 +1,37 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(document).ready(function () {
 
-// Write your JavaScript code.
+
+
+    //var value = $('#idOne').val(); // to get value from input 
+    //console.log(value)
+
+   // $('.inputOne').val("Hello World"); // to set a value in input
+
+
+    $('#btnOne').click(function () {
+        $('.inputOne').val($('#idOne').val());
+    })
+
+
+
+})
+
+
+/*
+    jQuery Selectors
+
+    tag selector => tag name
+
+    id selector =>  #
+
+    class selector => .
+
+    prop name => []
+
+*/
+
+
+// DOM manupulation
+
+// Ajax function of jquery
 
