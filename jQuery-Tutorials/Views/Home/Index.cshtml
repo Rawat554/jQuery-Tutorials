@@ -5,21 +5,51 @@
 
 <script src="~/js/site.js"></script>
 
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <div id="divOne">
+        <h1 class="display-4">Welcome</h1>
 
-    <input id="idOne" value="Hello" type="text" />
-    <input type="text" class="inputOne" />
-    <input type="text" class="inputOne" />
-    <input type="text" class="inputOne" />
-    <input type="text" class="inputOne" />
-    <input type="text" class="inputOne" />
-    <input type="text" class="inputOne" />
-    <input type="text" class="inputOne" />
+    </div>
 
+    <div id="form">
+        <input id="idOne" value="Hello" type="text" />
+        <input type="text" value="Hello" class="inputOne" />
+        <input type="text" class="inputOne" />
+        <input type="text" class="inputOne" />
+        <input type="text" class="inputOne" />
+        <input type="text" value="Hello" class="inputOne" />
+        <input type="text" class="inputOne" />
+        <input type="text" class="inputOne" />
+        <br />
+        <input type="radio" name="gender" value="male" />Male
+        <br />
+        <input type="radio" name="gender" value="female" />Female
+        <br />
+        <input type="radio" name="gender" value="other" />Other
+        <br />
+    </div>
 
     <button id="btnOne" data-value="Hello World">Click me</button>
+
 
 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
