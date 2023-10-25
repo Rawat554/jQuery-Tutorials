@@ -3,7 +3,7 @@
 }
 
 
-<script src="~/js/site.js"></script>
+<script defer src="~/js/site.js"></script>
 
 <style>
     table {
@@ -21,6 +21,14 @@
     tr:nth-child(even) {
         background-color: #dddddd;
     }
+
+
+    .div{
+        border: solid 2px;
+        padding:40px;
+        margin:40px;
+    }
+
 </style>
 
 
@@ -53,6 +61,18 @@
 
 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+
+
+    <div class="div" style="background:red" id="red">
+        <div class="div" style="background:green" id="green">
+            <div class="div" style="background:blue" id="blue">
+
+            </div>
+        </div>
+    </div>
+
 </div>
 
 

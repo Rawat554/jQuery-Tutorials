@@ -19,58 +19,53 @@
     $('#btnOne').click(function () {
         //console.log($('input[type="radio"]:checked').val())
 
+        var data = {
+            "StudentName": "temp",
+            "FatherName": "xyz",
+            "CollegeName": "CGC",
+            "CourseName": "BCA",
+            "Gender": "Male",
+            "Age": "23",
+            "Country": "101",
+            "State": "32",
+            "IsActive": "true",
+            "id":"10"
+        }
 
 
-        var table = `<table class="tbl">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-    <th>Actions</th>
-  </tr>
-  <tr>
-    <td class="comp">Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td><button class="getData">Get Data</button></td>
-  </tr>
-  <tr>
-    <td class="comp">Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-    <td><button class="getData">Get Data</button></td>
-  </tr>
-  <tr>
-    <td class="comp">Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-    <td><button class="getData">Get Data</button></td>
-  </tr>
-  <tr>
-    <td class="comp">Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-    <td><button class="getData">Get Data</button></td>
-  </tr>
-  <tr>
-    <td class="comp">Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-    <td><button class="getData">Get Data</button></td>
-  </tr>
-  <tr>
-    <td class="comp">Magazzini Alimentari Riuniti</td>
-    <td class="contact">Giovanni Rovelli</td>
-    <td class="country">Italy</td>
-    <td><button class="getData">Get Data</button></td>
-  </tr>
-</table>`
+
+        //$.ajax(
+
+        //    {
+        //        url: "",
+        //        type: "",
+        //        data: {}
+
+        //    }
+
+        //)
 
 
-        $('#form').empty();
 
-        $('#form').append(table);
 
+        // Asyncronus
+        // async
+
+
+
+        $.ajax({
+            url: '../Home/GetData',
+            type: "get",
+            //data: data,
+            datatype: 'application/json',
+            success: function (res) {
+                console.log(res)
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+        
     })
 
 
@@ -118,7 +113,36 @@ $(document).on('click', '.getData', function () {
 
 // upcomming
 
-// target and current targate
+// target and current targate  and event propagation
+
+
+
+var divRed = document.getElementById('red')
+var divGreen = document.getElementById('green')
+var divBlue = document.getElementById('blue')
+
+var defaultCapture = true;
+
+divRed.addEventListener('click', function (e) {
+    //e.stopPropagation()
+    console.log(`tatget is ${e.target.id} and current target is ${e.currentTarget.id} in red div`)
+    
+},defaultCapture)
+
+divGreen.addEventListener('click', function (e) {
+    //e.stopPropagation()
+    console.log(`tatget is ${e.target.id} and current target is ${e.currentTarget.id} in green div`)
+},defaultCapture)
+
+divBlue.addEventListener('click', function (e) {
+    //e.stopPropagation()
+    console.log(`tatget is ${e.target.id} and current target is ${e.currentTarget.id} in blue div`)
+}, defaultCapture)
+
+
+
+// Ajax
+
 
 
 
